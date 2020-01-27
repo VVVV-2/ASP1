@@ -1,0 +1,45 @@
+﻿@page
+@model MyApp.Namespace.ContactModel
+@{
+    ViewData["Title"] = "Razor";
+
+    var List = new String[] {
+
+        "DT057G, Computer Engineering BA (A), Web Development I, 7.5 Credits, progression: A, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=17948'>Url</a>",
+
+        "DT084G, Computer Engineering BA (A), Introduction to Programming in Java, progression: A, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=21877'>Url</a>",
+
+        "DT163G, Computer Engineering BA (A), Digital Imaging for the Web, 7.5 Credits, progression: A, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=21898'>Url</a>",
+
+        "GD008G, Graphic Design BA (A), Typography and Layout for Internet Publishing, 7,5 Credits, progression: A, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=21669'>Url</a>",
+
+        "DT003G, Computer Engineering BA (A), Database Systems, 7,5 credits, progression: A, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=21595'>Url</a>",
+
+        "DT093G, Computer Engineering BA (B), Web Development II, 7.5 Credits, progression: B, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=21874'>Url</a>",
+
+        "DT068G, Computer Engineering BA (B), Web Usability, 7.5 Credits, progression: B, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=19699'>Url</a>",
+
+        "DT152G, Computer Engineering BA (B), Web Design for CMS, 7.5 Credits, progression: B, <a href='https://www.miun.se/en/education/courses/search-syllabus/show-syllabus/?Urlid=21872'>Url</a>",
+
+    };
+
+
+}
+
+    <h1>Razor</h1>
+
+    <p>@DateTime.Now.ToString("dd/MM/yyyy hh:mm")</p>
+
+    @if(DateTime.Now.DayOfWeek.ToString() == "Monday"){
+        <p>Idag är det måndag med..</p>
+    } else {
+        <p>Snart är det måndag..</p>
+    }
+
+    <p>Detta är kurser jag har läst</p>
+
+    <ul>
+        @foreach(var item in List){
+        <li>@Html.Raw(@item)</li>
+    }
+    </ul>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="se">
+    <head>
+        <title>
+            @ViewData["Title"]
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="TopContainer">
+            <h1>ASP.NET Core</h1>
+            <h3>Dagens datum är: @DateTime.Now.ToShortDateString()</h3>
+        </div>
+
+        <div class="MainFlexbox">
+
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Start</a>
+                    </li>
+                    <li>
+                        <a href="/razor">Razor</a>
+                    </li>
+                    <li>
+                        <a href="/about">Om sidan</a>
+                    </li>
+                </ul>
+            </nav>
+            
+
+            <main>
+                @RenderBody()
+            </main>
+
+        </div>
+        <footer>
+                <p>
+                    Av William Wara 2019. Kontakt: <a href="mailto:wiwa1801@miun.se">wiwa1801@@miun.se</a>
+                </p>
+        </footer>
+    </body>
+</html>

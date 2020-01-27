@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\spast\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\spast\\.nuget\\packages"
+    ]
+  }
+}
